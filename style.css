@@ -230,133 +230,41 @@ a:hover {
   color: #007bff;              /* Màu xanh nhẹ hoặc bạn có thể chọn màu khác */
 }
 
-/* Reset & font */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background: #f9f9fb;
-  color: #222;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  background: #1f1f1f;
-  color: white;
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-header .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1rem;
-  transition: color 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  color: #00c2ff;
-}
-
-/* About Section */
-main {
-  width: 90%;
-  max-width: 1000px;
-  margin: 2rem auto;
-}
-
-.about h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.intro {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 3rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Member Cards */
-.members {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
+/* --- About Page (member card style) --- */
 .member-card {
-  background: white;
-  border-radius: 15px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  gap: 1rem;
 }
 
-.member-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+.member-card .media {
+  flex-shrink: 0;
 }
 
-.avatar {
-  width: 120px;
-  height: 120px;
+.member-card .avatar {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #00c2ff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.info h3 {
-  color: #00c2ff;
+.member-card .info h3 {
   font-size: 1.4rem;
+  color: #00c2ff;
   margin-bottom: 0.5rem;
 }
 
-.info p {
+.member-card .info p {
+  color: #333;
   margin-bottom: 0.4rem;
-  color: #444;
+  line-height: 1.5;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .member-card {
     flex-direction: column;
     text-align: center;
   }
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background: #1f1f1f;
-  color: #ccc;
-  padding: 1rem;
-  margin-top: 3rem;
-  font-size: 0.9rem;
 }
