@@ -1,0 +1,362 @@
+/* TOÀN TRANG */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* INTRO */
+#intro {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro-text {
+  font-size: 4rem;
+  color: #0078ff;
+  letter-spacing: 2px;
+  font-weight: 700;
+  animation: zoomGlow 1.8s ease-in-out infinite alternate;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+/* HEADER + NAV */
+header {
+  text-align: center;
+  padding: 15px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  color: #0078ff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* CHÀO MỪNG Ở GIỮA */
+main.center {
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #0078ff;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 600px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #555;
+}
+
+/* HIỆU ỨNG CHUYỂN */
+.hidden { opacity: 0; }
+.fade-in { animation: fadeInMain 1s ease-in forwards; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeInMain {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomGlow {
+  from {
+    transform: scale(1);
+    text-shadow: 0 0 5px #0078ff, 0 0 10px #0078ff;
+  }
+  to {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #00b3ff, 0 0 40px #0095ff;
+  }
+}
+
+/* NHẬT KÝ LINH KIỆN */
+main.diary {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.entry {
+  animation: fadeInUp 0.7s ease;
+}
+
+.card {
+  background: #fdfdfd;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #00a387;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.media {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.media img, 
+.media video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.media img:hover,
+.media video:hover {
+  transform: scale(1.03);
+}
+
+/* Hiệu ứng vào mượt */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.part-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease;
+}
+
+.detail-card img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.detail-card h2 {
+  color: #00a387;
+  margin-bottom: 15px;
+}
+
+.detail-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.detail-card li {
+  margin: 5px 0;
+}
+
+.detail-card p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Xóa gạch chân và đổi màu liên kết */
+a {
+  text-decoration: none;       /* Ẩn gạch chân */
+  color: inherit;              /* Giữ nguyên màu chữ của phần tử cha */
+  transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+/* Khi rê chuột lên thì đổi nhẹ màu */
+a:hover {
+  color: #007bff;              /* Màu xanh nhẹ hoặc bạn có thể chọn màu khác */
+}
+
+/* Reset & font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f9f9fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #1f1f1f;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+header .container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00c2ff;
+}
+
+/* About Section */
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Member Cards */
+.members {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.member-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00c2ff;
+}
+
+.info h3 {
+  color: #00c2ff;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.info p {
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .member-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #1f1f1f;
+  color: #ccc;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}

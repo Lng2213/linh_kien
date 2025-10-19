@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2Bits - Hành trình thu thập linh kiện</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <h1 class="intro-text">2Bits</h1>
+  </div>
+
+  <!-- NỘI DUNG CHÍNH -->
+  <div id="content" class="hidden">
+    <header>
+      <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="diary.html">Nhật ký</a>
+        <a href="about.html">Về chúng tôi</a>
+      </nav>
+    </header>
+
+    <main class="center">
+      <section class="hero">
+        <h1>Chào mừng đến với 2Bits!</h1>
+        <p>Blog này được tạo ra bởi Long và Sang – hai người bạn có chung niềm đam mê với công nghệ và lịch sử phát triển của máy tính.
+Trong suốt quá trình tìm kiếm và phục hồi những linh kiện hiếm, chúng tôi mong muốn lưu giữ không chỉ những món đồ mang giá trị sưu tầm, mà còn cả tinh thần sáng tạo của từng giai đoạn công nghệ.
+Đây là nơi chia sẻ kiến thức, trải nghiệm, và cảm hứng – dành cho tất cả những ai yêu thích phần cứng và thế giới máy tính..</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 2Bits - All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const intro = document.getElementById('intro');
+      const content = document.getElementById('content');
+
+      setTimeout(() => {
+        intro.classList.add('fade-out');
+        setTimeout(() => {
+          intro.style.display = 'none';
+          content.classList.remove('hidden');
+          content.classList.add('fade-in');
+        }, 1000);
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
